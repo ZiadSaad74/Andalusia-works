@@ -1,6 +1,6 @@
 # Welcome to my works during my journey with Andalusia Business Solutions.
 ## It includes:
-#- Data cleaning and preprocessing for accuracy and readability, in the two files for the two tables, A table for each file (Awp leads filter - Phones filter).
+  1- Data cleaning and preprocessing for accuracy and readability, in the two files for the two tables, A table for each file (Awp leads filter - Phones filter).
   2- Data analysis for the two table after merging them, analysis for Agent Performance Analysis, Optimal Call Times Analysis and Response Rate Analysis.
   3- A final dashboard for summary statistics for all data, You can chech the image (summary.png).
 
