@@ -13,8 +13,7 @@ def load_data():
 
 df = load_data()
 
-st.sidebar.image('icon.jpg',use_column_width=True)
-st.sidebar.title("Leads Analysis by Governorates")
+st.sidebar.title("Leads Analysis by Governorates 🌍")
 st.sidebar.header("⚙️ Filter")
 
 max_date = df['Created On'].max()
@@ -53,5 +52,5 @@ if not result_counts.empty:
 else:
     st.warning("No data available for the selected date range.")
 
-with st.expander("See DataFrame (Selected Time Frame)"):
+with st.expander("Display the data 🗂️"):
     st.dataframe(df_filtered)
