@@ -25,14 +25,14 @@ end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_v
 
 counts = list(df.location.unique())
 counts.insert(0,'All locations')
-location_selection = st.sidebar.multiselect("Select location", counts )
+location_selection = st.sidebar.sleectbox("Select location", counts )
 
 agents = list(df.Owner.unique())
 agents.insert(0,"All agents")
 agents_list  = st.sidebar.selectbox("Agent",agents)
 
-if 'All locations' not in location_selection:
-    df_filtered = df[df['location'].isin(location_selection)]
+if location_selection != 'All locations':
+    df_filtered = df[df['location'] == (location_selection)]
 else:
     df_filtered = df
 
