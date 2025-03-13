@@ -49,7 +49,7 @@ result_counts = df_filtered['Last Reached Call Result'].value_counts().reset_ind
 result_counts.columns = ['Result', 'Count']
 print(counts)
 
-st.subheader(f'Governorates results analysis)
+st.subheader(f'Governorates results analysis')
 st.markdown('Location : <b>{location_selection}<b> <br> Agent : <b>{agents_list}<b>', unsafe_allow_html=True)
 
 if not result_counts.empty:
