@@ -49,7 +49,7 @@ result_counts = df_filtered['Last Reached Call Result'].value_counts().reset_ind
 result_counts.columns = ['Result', 'Count']
 print(counts)
 
-st.subheader(f'Governorates results analysis \n Location : {location_selection} <br> Agent : {agents_list} ')
+st.markdown(f'Governorates results analysis \n Location : {location_selection} <br> Agent : {agents_list}', unsafe_allow_html=True)
 
 if not result_counts.empty:
     fig1 = px.bar(result_counts, x='Result', y='Count', color='Result', title= "Distribution of Calls Results")
