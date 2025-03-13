@@ -31,13 +31,13 @@ agents = list(df.Owner.unique())
 agents.insert(0,"All agents")
 agents_list  = st.sidebar.multiselect("Agent",agents)
 
-if location_selection !='All locations':
-    df_filtered = df[df['location']==location_selection]
+if 'All locations' not in location_selection:
+    df_filtered = df[df['location'].isin(location_selection)]
 else:
     df_filtered = df
 
-if agents_list !='All agents':
-    df_filtered = df[df['Owner']==agents_list]
+if 'All agents' not in agents_list:
+    df_filtered = df[df['Owner'].isin(agents_list)]
 else:
     df_filtered = df
 
