@@ -36,8 +36,8 @@ if 'All locations' not in location_selection:
 else:
     df_filtered = df
 
-if agents_list != 'agents_list':
-    df_filtered = df[df['Owner'].isin(agents_list)]
+if agents_list != 'All agents':
+    df_filtered = df[df['Owner'] == (agents_list)]
 else:
     df_filtered = df
 
