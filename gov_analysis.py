@@ -25,7 +25,7 @@ end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_v
 
 counts = list(df.location.unique())
 counts.insert(0,'All locations')
-location_selection = st.sidebar.sleectbox("Select location", counts )
+location_selection = st.sidebar.selectbox("Select location", counts )
 
 agents = list(df.Owner.unique())
 agents.insert(0,"All agents")
