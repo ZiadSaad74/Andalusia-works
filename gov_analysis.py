@@ -31,19 +31,15 @@ agents = list(df.Owner.unique())
 agents.insert(0,"All agents")
 agents_list  = st.sidebar.selectbox("Agent",agents)
 
-if location_selection !='All locations':
-    df_filtered = df[df['location']==location_selection]
-else:
-    df_filtered = df
-
-if agents_list !='All agents':
-    df_filtered = df[df['Owner']==agents_list]
-else:
-    df_filtered = df
-
 df_filtered = df_filtered[
                         (df_filtered['Created On'] >= pd.Timestamp(start_date)) & 
                         (df_filtered['Created On'] <= pd.Timestamp(end_date))]
+
+if location_selection !='All locations':
+    df_filtered = df_filtered[df_filtered['location']==location_selection]
+
+if agents_list !='All agents':
+    df_filtered = df_filtered[df_filtered['Owner']==agents_list]
 
 result_counts = df_filtered['Last Reached Call Result'].value_counts().reset_index()
 result_counts.columns = ['Result', 'Count']
