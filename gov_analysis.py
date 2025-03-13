@@ -24,13 +24,13 @@ start_date = st.sidebar.date_input("Start Date", default_start_date, min_value=m
 end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_value=max_date)
 
 counts = list(df.location.unique())
-counts.insert(0,'All locations')
 counts.sort()
+counts.insert(0,'All locations')
 location_selection = st.sidebar.selectbox("Select location", counts )
 
 agents = list(df.Owner.unique())
-agents.insert(0,"All agents")
 agents.sort()
+agents.insert(0,"All agents")
 agents_list  = st.sidebar.selectbox("Agent",agents)
 
 df_filtered = df[(df['Created On'] >= pd.Timestamp(start_date)) & (df['Created On'] <= pd.Timestamp(end_date))]
