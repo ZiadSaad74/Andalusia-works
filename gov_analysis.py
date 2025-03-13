@@ -29,14 +29,14 @@ location_selection = st.sidebar.multiselect("Select location", counts )
 
 agents = list(df.Owner.unique())
 agents.insert(0,"All agents")
-agents_list  = st.sidebar.multiselect("Agent",agents)
+agents_list  = st.sidebar.selectbox("Agent",agents)
 
 if 'All locations' not in location_selection:
     df_filtered = df[df['location'].isin(location_selection)]
 else:
     df_filtered = df
 
-if 'All agents' not in agents_list:
+if agents_list != 'agents_list':
     df_filtered = df[df['Owner'].isin(agents_list)]
 else:
     df_filtered = df
