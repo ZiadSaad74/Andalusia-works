@@ -44,7 +44,7 @@ result_counts.columns = ['Result', 'Count']
 print(counts)
 
 st.subheader(f'Governorates results analysis')
-st.markdown(f'Location : <b>{location_selection}</b> <br> Agent : <b>{agents_list}</b><br> Total leads = <br>{len(df_filtered)}</b>', unsafe_allow_html=True)
+st.markdown(f'Location : <b>{location_selection}</b> <br> Agent : <b>{agents_list}</b><br> Total leads = <b>{len(df_filtered)}</b>', unsafe_allow_html=True)
 
 if not result_counts.empty:
     fig1 = px.bar(result_counts, x='Result', y='Count', color='Result', title= "Distribution of Calls Results")
