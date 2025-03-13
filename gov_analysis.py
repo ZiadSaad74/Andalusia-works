@@ -31,7 +31,7 @@ agents = list(df.Owner.unique())
 agents.insert(0,"All agents")
 agents_list  = st.sidebar.selectbox("Agent",agents)
 
-df_filtered = df_filtered[(df_filtered['Created On'] >= pd.Timestamp(start_date)) & (df_filtered['Created On'] <= pd.Timestamp(end_date))]
+df_filtered = df[(df['Created On'] >= pd.Timestamp(start_date)) & (df['Created On'] <= pd.Timestamp(end_date))]
 
 if location_selection !='All locations':
     df_filtered = df_filtered[df_filtered['location']==location_selection]
