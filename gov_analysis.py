@@ -28,10 +28,16 @@ counts.insert(0,'All locations')
 location_selection = st.sidebar.selectbox("Select location", counts )
 
 agents = list(df.Owner.unique())
+agents.insert(0,"All agents")
 agents_list  = st.sidebar.selectbox("Agent",agents)
 
 if location_selection !='All locations':
     df_filtered = df[df['location']==location_selection]
+else:
+    df_filtered = df
+
+if agents_list !='All agents':
+    df_filtered = df[df['Owner']==agents_list]
 else:
     df_filtered = df
 
