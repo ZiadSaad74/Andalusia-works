@@ -23,10 +23,15 @@ default_start_date = max(min_date, max_date - timedelta(days=365))
 start_date = st.sidebar.date_input("Start Date", default_start_date, min_value=min_date, max_value=max_date)
 end_date = st.sidebar.date_input("End Date", max_date, min_value=min_date, max_value=max_date)
 
-counts = list(df.location.unique())
+counts = list(df['Last Reached Call Result'].unique())
 counts.sort()
-counts.insert(0,'All locations')
-location_selection = st.sidebar.selectbox("Select location", counts )
+counts.insert(0,'All results')
+result_selection = st.sidebar.selectbox("Select result", counts )
+
+locs = list(df['location'].unique())
+locs.sort()
+locs.insert(0,'All locations')
+locations = st.sidebar.selectbox("Select location", locs )
 
 agents = list(df.Owner.unique())
 agents.sort()
@@ -35,25 +40,32 @@ agents_list  = st.sidebar.selectbox("Agent",agents)
 
 df_filtered = df[(df['Created On'] >= pd.Timestamp(start_date)) & (df['Created On'] <= pd.Timestamp(end_date))]
 
-if location_selection !='All locations':
-    df_filtered = df_filtered[df_filtered['location']==location_selection]
+if result_selection !='All results':
+    df_filtered = df_filtered[df_filtered['Last Reached Call Result']==result_selection]
 
 if agents_list !='All agents':
     df_filtered = df_filtered[df_filtered['Owner']==agents_list]
+    
+if locations !='All locations':
+    df_filtered = df_filtered[df_filtered['location']==locations]
 
-result_counts = df_filtered['Last Reached Call Result'].value_counts().reset_index()
-result_counts.columns = ['Result', 'Count']
-print(counts)
+result_counts = df_filtered['location'].value_counts().reset_index()
+result_counts.columns = ['Location', 'Count']
+
+result_counts2 = df_filtered['Last Reached Call Result'].value_counts().reset_index()
+result_counts2.columns = ['Result', 'Count']
 
 st.subheader(f'Governorates results analysis')
-st.markdown(f'Location : <b>{location_selection}</b> <br> Agent : <b>{agents_list}</b><br> Total leads = <b>{len(df_filtered)}</b>', unsafe_allow_html=True)
+st.markdown(f'Result : <b>{result_selection}</b> <br> Agent : <b>{agents_list}</b><br> Total leads = <b>{len(df_filtered)}</b><br> Location : <b>{locations}</b>', unsafe_allow_html=True)
 
 if not result_counts.empty:
-    fig1 = px.bar(result_counts, x='Result', y='Count', color='Result', title= "Distribution of Calls Results")
-    fig2 = px.pie(result_counts, names='Result', values='Count', title= "Perecentge of each result")
+    fig1 = px.bar(result_counts, x='Location', y='Count', color='Location', title= "Distribution of locations by result")
+    fig2 = px.pie(result_counts, names='Location', values='Count', title= "Perecentge of each location")
+    fig3 = px.bar(result_counts2, x="Result", y= 'Count', title='Distribution of results')
 
     st.plotly_chart(fig1, use_container_width=True)
     st.plotly_chart(fig2, use_container_width=True)
+    st.plotly_chart(fig3)
 
 else:
     st.warning("No data available for the selected date range.")
