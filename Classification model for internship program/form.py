@@ -4,20 +4,10 @@ import string
 import nltk
 from nltk.corpus import stopwords
 
-# Load the trained model and vectorizer (make sure these paths are correct)
-model = joblib.load("model.pkl")  # Your trained model
-vectorizer = joblib.load("vec.pkl")  # The vectorizer used for training
+model = joblib.load("model.pkl")  
+vectorizer = joblib.load("vec.pkl")  
 
-# Define your 8 courses
-courses = [
-    "Dentistry",
-    "HR",
-    "Internship-pharma",
-    "pmo",
-    "Quality",
-    "Software",
-    "Physiotherapy", "opd lead"
-]
+courses = ["Dentistry", "HR", "Internship-pharma", "pmo", "Quality", "Software", "Physiotherapy", "opd lead"]
 
 nltk.download('stopwords')
 stop_words = set(stopwords.words('english'))
@@ -32,26 +22,21 @@ def clean_text(text):
     final = " ".join(tokens)
     return final
 
-# Page title
-st.title("Course Recommendation System")
+st.title("Internships programs Recommendation System")
 
-# Streamlit form
 with st.form("course_form"):
     job_title = st.text_input("Job Title", placeholder="Enter your job title", max_chars=100)
     selected_course = st.selectbox("Select a Course", courses)
     submit = st.form_submit_button("Submit")
 
-# After form submission
 if submit:
     if not job_title:
         st.error("Job title is required.")
     else:
         job_title = clean_text(str(job_title))
 
-        # Transform the job_title using the same vectorizer as in training
         job_title_vector = vectorizer.transform([job_title])
 
-        # Predict using the model
         prediction = model.predict(job_title_vector)[0]  # make sure to pass the vectorized input
 
         if job_title.lower() in ['frontend', 'front end', 'backend','back end', 'full stack', 'fullstack'] and selected_course == 'Software':
