@@ -118,6 +118,41 @@ Merged the ad lead data with the main leads dataset, filtered from 1st December 
 - Dashboard Implementation:
 Performed the full analysis and visualization in Power BI, focusing on geographic performance and call result metrics.
 
+- Scraping Doctors’ Data
+Description:
+
+# 5- Scrapping doctors’ information from external medical platforms.
+
+- The purpose was to enrich the Andalusia CRM with verified data about doctors across various specialties, regions, and institutions to support targeted marketing and recruitment efforts.
+
+**Project Features**:
+
+- Automated Web Scraping:
+Collected public information about doctors, including names, specialties, cities, institutions, and contact details.
+
+- Multi-Site Integration:
+The script was designed to handle different website structures and extract structured data across multiple directories.
+
+- Data Standardization:
+Ensured all collected data was cleaned, normalized, and formatted to be imported directly into the CRM system.
+
+- Duplicate Detection and Handling:
+Applied logic to detect and remove duplicates using fuzzy matching to avoid redundant entries in the CRM.
+
+- Specialty-Based Filtering:
+Scraped profiles were categorized by medical specialty to support segmentation and focused communication.
+
+**Preprocessing Steps**:
+
+- Web Scraping Script Development:
+Built using Python, with libraries such as BeautifulSoup, Requests, and Selenium (for dynamic pages).
+
+- Data Cleaning and Structuring:
+Cleaned inconsistent values, removed invalid entries, and structured data into a tabular format with fields like Name, Specialty, City, Institution, and Contact.
+
+- Validation:
+Random samples were manually validated to ensure scraping accuracy before pushing the full dataset.
+
 
 
 
