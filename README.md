@@ -1,7 +1,7 @@
 # Welcome to my works during my journey with Andalusia Business Solutions.
 
 # Repositry Ovreview:
-- This repository contains several analytical tasks for my position in **Andalusia Health Business Solutions**, like dashboards, machine learning models, web scraping data projects. Below is a breakdown of each folder, including descriptions, objectives, and the main skills or tools used.
+This repository contains several analytical tasks for my position in **Andalusia Health Business Solutions**, like dashboards, machine learning models, web scraping data projects. Below is a breakdown of each folder, including descriptions, objectives, and the main skills or tools used.
 
 # 1- AWP dashboard:
 
