@@ -1,18 +1,45 @@
 # Welcome to my works during my journey with Andalusia Business Solutions.
-## It includes:
-  1- Data cleaning and preprocessing for accuracy and readability, in the two files for the two tables, A table for each file (Awp leads filter - Phones filter).
-  
-  2- Data analysis for the two table after merging them, analysis for Agent Performance Analysis, Optimal Call Times Analysis and Response Rate Analysis.
-  
-  3- A final dashboard for summary statistics for all data, You can chech the image (summary.png).
 
-  4- A final dashboard for call results for each governorates, found in two files (gov_analysis.py) using streamlit in this link (https://governorates-analysis.streamlit.app/)       and (Governorates analysis.pbix) using Power BI
+# Repositry Ovreview:
+- This repository contains several analytical tasks for my position in **Andalusia Health Business Solutions**, like dashboards, machine learning models, web scraping data projects. Below is a breakdown of each folder, including descriptions, objectives, and the main skills or tools used.
 
-  5- Documentation of the done analysis insights, you have two files (agents performance and response.pdf) and (Insights for Ramadan performance.pdf)
+# 1- AWP dashboard:
 
-## More explanations:
-  1- The file (awp leads filter.ipynp) it's responsible for the leads, filling and Nulls replacements, columns rename, dropping redundant columns
-  
-  2- The file (Phones filter.ipynp) it's responsible for phone calls details for each lead, filling and Nulls replacements, columns rename, dropping redundant columns.
-  
-  3- The file (awp analysis.ipynp) it's responsible for merging the leads and phones data on the leads names, to find hidden insights that cannot be found by dashboard, responce call time, responce rate analysis (Reachability - Interest rate).
+**Description**: 
+- A Power BI dashboard designed for a real estate team data that targets doctors (DRs) to sell Andalusia clinics.
+- It provides actionable insights about team performance metrics, the distributions of lead sourses (Digital - Referrals) The dashboard helps the team track key indicators, identify high-potential leads, total results for agent calls with leads, and optimize their sales strategy.
+
+**Dashboards features**
+1- Total interested leads sold over time.
+2- Conversion rate (Leads to Interested leads).
+3- Average time to close a deal for each agent.
+4- Touchability (If there's agent call/meet this lead of not) and reachability for the leads (If the lead answered the agent calls or not )
+5- The results of all agents calls.
+6- Interactive Filters: Filter by Agent name, doctor specialty, time period (e.g., Year, Month).
+7- Visualizations: Includes bar charts, pie charts, and KPI cards for a clear overview of performance.
+
+# 2- Agents Performance and Response Rate Analysis.
+
+**Description**: 
+- A Python-based data analysis project designed for the real estate team, data source is CRM database.
+
+- This project provides actionable insights into agent performance, lead response delays, optimal call timings, and overall lead reachability. The goal is to enhance engagement, improve follow-up strategies, and optimize scheduling based on data-driven findings.
+
+**Project Features**:
+1- Delayed Response Time Analysis: Measures the time between lead assignment and the first call to identify operational inefficiencies and improve responsiveness.
+
+Optimal Call Timing (Days & Hours): Determines the best days and hours to contact doctors by analyzing call logs and response patterns to increase answered calls.
+
+Agent Performance Evaluation: Assesses each agent's reachability rate (calls answered) and interest rate (converted to interested leads), identifying high and low performers.
+
+Unreachability Pattern Detection: Highlights hours with low engagement and high unreachability to avoid inefficient calling times.
+
+Actionable Insights for Management: Provides insights that guide team leaders in scheduling improvements, resource allocation, and targeted training.
+
+**Preprocessing Steps**:
+1- Cleaned missing values in key fields: Specialty, Last Call Status, Appointment Results, Not Interested Reason, and Follow-up Action.
+2- Identified and resolved inconsistencies such as missing lead activities and mismatched call records between datasets.
+3- Filtered data between October 1, 2024 and February 10, 2025 according to the business requirement.
+4- Merged the Leads dataset with Phone Calls Activity logs for consolidated analysis.
+
+**Techniques**: Python, Pandas, Matplotlib and Seaborn for visualizations
