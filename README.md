@@ -50,3 +50,36 @@ This repository contains several analytical tasks for my position in **Andalusia
 - A smart internship recommendation system developed for Andalusia Academy, designed to resolve inconsistencies in job titles and improve alignment between candidate roles and available training programs.
 
 - The system uses a keyword-based matching algorithm to recommend the most suitable training programs or individual courses based on the candidate's job title. It supports HR recruiters in program assignment and optimizes the training workflow.
+
+**Project Features**:
+
+- Smart Matching of Job Titles to Programs:
+Uses keyword-driven logic to accurately map job titles to relevant training programs, solving the challenge of inconsistent and unstructured job data.
+
+- Recruiter Support During Interviews:
+The dashboard acts as a support tool for HR recruiters, helping them make informed decisions during interviews by suggesting the most relevant training paths.
+
+- Fallback Course Recommendation System:
+If a lead is not suitable for an existing program, the system searches for relevant individual training courses and provides recommendations accordingly.
+
+- Enhanced Data Collection Process:
+Due to low-quality input data (missing values, free-text fields), a proposal was sent to improve the Ads application form structure, suggesting new columns and dropdown fields to streamline future processing.
+
+- Manual System Dependency:
+The current data pipeline is manually maintained through a SharePoint Excel sheet. The importance of CRM integration was discussed to make the system more dynamic and scalable.
+
+**Preprocessing Steps**:
+
+- Data Cleaning:
+Fixed missing values and incorrect entries, especially in City and Job Title fields, which were originally input as free-text instead of dropdowns.
+
+- Matching Challenges:
+The Job Title field had a high number of unique and inconsistent values, making matching difficult. A dynamic, dictionary-based solution was proposed and is currently under discussion with CRM and team managers.
+
+- Manual Data Updates:
+Since the system isn't yet connected to the CRM, the data is manually updated by specialists via SharePoint Excel.
+
+- System Deployment:
+The dashboard and model were completed and sent to Mr. Mohammad Mossad for hosting and future integration.
+
+
