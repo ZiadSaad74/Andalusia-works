@@ -83,3 +83,41 @@ Since the system isn't yet connected to the CRM, the data is manually updated by
 The dashboard and model were completed and sent to Mr. Mohammad Mossad for hosting and future integration.
 
 
+# 4- Ads Leads Analysis by Locations
+**Description:**
+
+- A Power BI dashboard project designed to analyze leads generated from social media ads, with a specific focus on geographic engagement.
+
+- The objective is to determine which governorates generate the most leads and to understand how call outcomes vary across different locations. This helps optimize marketing strategies and improve targeting for future ad campaigns.
+
+**Project Features**:
+
+- Governorate-Level Lead Engagement Analysis:
+Visualizes which governorates engage the most with ads and contribute the highest volume of leads.
+
+- Call Result Distribution by Location:
+Breaks down call outcomes (e.g., Interested, Not Interested, No Answer) for each governorate to assess lead quality by area.
+
+- Percentage-Based Comparisons:
+Displays the percentage of each call result per location, helping identify strong and weak performance zones.
+
+- Interactive Filtering:
+Enables filtering by Governorate or Agent Name for detailed exploration and extraction of insights.
+
+- Exportable Insights:
+The dashboard allows users to export segmented data based on location or agent for reporting or follow-up purposes.
+
+**Preprocessing Steps**:
+
+- Data Cleaning:
+Cleaned and prepared the raw dataset provided by the Social Media Specialist, ensuring it was 100% ready for analysis.
+
+- Dataset Merging:
+Merged the ad lead data with the main leads dataset, filtered from 1st December 2024, since the ads data only contained lead name and governorate.
+
+- Dashboard Implementation:
+Performed the full analysis and visualization in Power BI, focusing on geographic performance and call result metrics.
+
+
+
+
