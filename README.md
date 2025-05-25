@@ -26,20 +26,20 @@ This repository contains several analytical tasks for my position in **Andalusia
 - This project provides actionable insights into agent performance, lead response delays, optimal call timings, and overall lead reachability. The goal is to enhance engagement, improve follow-up strategies, and optimize scheduling based on data-driven findings.
 
 **Project Features**:
-1- Delayed Response Time Analysis: Measures the time between lead assignment and the first call to identify operational inefficiencies and improve responsiveness.
+- Delayed Response Time Analysis: Measures the time between lead assignment and the first call to identify operational inefficiencies and improve responsiveness.
 
-Optimal Call Timing (Days & Hours): Determines the best days and hours to contact doctors by analyzing call logs and response patterns to increase answered calls.
+- Optimal Call Timing (Days & Hours): Determines the best days and hours to contact doctors by analyzing call logs and response patterns to increase answered calls.
 
-Agent Performance Evaluation: Assesses each agent's reachability rate (calls answered) and interest rate (converted to interested leads), identifying high and low performers.
+- Agent Performance Evaluation: Assesses each agent's reachability rate (calls answered) and interest rate (converted to interested leads), identifying high and low performers.
 
-Unreachability Pattern Detection: Highlights hours with low engagement and high unreachability to avoid inefficient calling times.
+- Unreachability Pattern Detection: Highlights hours with low engagement and high unreachability to avoid inefficient calling times.
 
-Actionable Insights for Management: Provides insights that guide team leaders in scheduling improvements, resource allocation, and targeted training.
+- Actionable Insights for Management: Provides insights that guide team leaders in scheduling improvements, resource allocation, and targeted training.
 
 **Preprocessing Steps**:
-1- Cleaned missing values in key fields: Specialty, Last Call Status, Appointment Results, Not Interested Reason, and Follow-up Action.
-2- Identified and resolved inconsistencies such as missing lead activities and mismatched call records between datasets.
-3- Filtered data between October 1, 2024 and February 10, 2025 according to the business requirement.
-4- Merged the Leads dataset with Phone Calls Activity logs for consolidated analysis.
+- Cleaned missing values in key fields: Specialty, Last Call Status, Appointment Results, Not Interested Reason, and Follow-up Action.
+- Identified and resolved inconsistencies such as missing lead activities and mismatched call records between datasets.
+- Filtered data between October 1, 2024 and February 10, 2025 according to the business requirement.
+- Merged the Leads dataset with Phone Calls Activity logs for consolidated analysis.
 
 **Techniques**: Python, Pandas, Matplotlib and Seaborn for visualizations
