@@ -43,3 +43,10 @@ This repository contains several analytical tasks for my position in **Andalusia
 - Merged the Leads dataset with Phone Calls Activity logs for consolidated analysis.
 
 **Techniques**: Python, Pandas, Matplotlib and Seaborn for visualizations
+
+# 3- AHA – Internship Management System
+**Description:**
+
+- A smart internship recommendation system developed for Andalusia Academy, designed to resolve inconsistencies in job titles and improve alignment between candidate roles and available training programs.
+
+- The system uses a keyword-based matching algorithm to recommend the most suitable training programs or individual courses based on the candidate's job title. It supports HR recruiters in program assignment and optimizes the training workflow.
