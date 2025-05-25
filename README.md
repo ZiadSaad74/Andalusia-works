@@ -10,13 +10,13 @@ This repository contains several analytical tasks for my position in **Andalusia
 - It provides actionable insights about team performance metrics, the distributions of lead sourses (Digital - Referrals) The dashboard helps the team track key indicators, identify high-potential leads, total results for agent calls with leads, and optimize their sales strategy.
 
 **Dashboards features**
-1- Total interested leads sold over time.
-2- Conversion rate (Leads to Interested leads).
-3- Average time to close a deal for each agent.
-4- Touchability (If there's agent call/meet this lead of not) and reachability for the leads (If the lead answered the agent calls or not )
-5- The results of all agents calls.
-6- Interactive Filters: Filter by Agent name, doctor specialty, time period (e.g., Year, Month).
-7- Visualizations: Includes bar charts, pie charts, and KPI cards for a clear overview of performance.
+- Total interested leads sold over time.
+- Conversion rate (Leads to Interested leads).
+- Average time to close a deal for each agent.
+- Touchability (If there's agent call/meet this lead of not) and reachability for the leads (If the lead answered the agent calls or not )
+- The results of all agents calls.
+- Interactive Filters: Filter by Agent name, doctor specialty, time period (e.g., Year, Month).
+- Visualizations: Includes bar charts, pie charts, and KPI cards for a clear overview of performance.
 
 # 2- Agents Performance and Response Rate Analysis.
 
