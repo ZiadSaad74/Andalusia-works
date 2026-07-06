@@ -118,8 +118,7 @@ Merged the ad lead data with the main leads dataset, filtered from 1st December 
 - Dashboard Implementation:
 Performed the full analysis and visualization in Power BI, focusing on geographic performance and call result metrics.
 
-- Scraping Doctors’ Data
-Description:
+- Dashboard is accessed by this link: https://leads-cities-analysis.streamlit.app/ 
 
 # 5- Scrapping doctors’ information from external medical platforms.
 
